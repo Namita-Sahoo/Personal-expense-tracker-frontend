@@ -404,3 +404,31 @@ button:hover {
     align-items: flex-end;
   }
 }
+/* Responsive navbar for small screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .nav-left {
+    font-size: 1.5rem;
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .nav-right {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-right a {
+    margin-left: 0;
+    font-size: 0.9rem;
+    color:#FFB300;
+  }
+}
