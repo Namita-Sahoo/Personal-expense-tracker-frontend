@@ -24,7 +24,7 @@ function ExpensePage() {
   },[]);
 
   const fetchExpense =() =>{
-    axios.get('http://localhost:5000/api/expenses')
+    axios.get('https://personal-expense-tracker-backend-m3i0.onrender.com/api/expenses')
     .then(res =>{
       setExpenses(res.data);
     })

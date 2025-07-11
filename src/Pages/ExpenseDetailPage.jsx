@@ -21,7 +21,7 @@ function ExpenseDetailPage() {
   }, []);
 
   const fetchExpenseDetails = () => {
-    axios.get(`http://localhost:5000/api/expenses/${id}`)
+    axios.get(`https://personal-expense-tracker-backend-m3i0.onrender.com/api/expenses/${id}`)
       .then(res => {
         setExpense(res.data);
       })
@@ -32,7 +32,7 @@ function ExpenseDetailPage() {
 
   const handleDelete = () => {
     if (window.confirm('Are you sure you want to delete this expense?')) {
-      axios.delete(`http://localhost:5000/api/expenses/${id}`)
+      axios.delete(`https://personal-expense-tracker-backend-m3i0.onrender.com/api/expenses/${id}`)
         .then(() => {
           alert("Expense deleted successfully!");
           navigate('/expense');

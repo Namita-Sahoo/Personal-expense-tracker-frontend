@@ -15,7 +15,7 @@ function AddExpense() {
 
     const newExpense = { title,amount,date,category,notes};
 
-    axios.post('http://localhost:5000/api/expenses', newExpense)
+    axios.post('https://personal-expense-tracker-backend-m3i0.onrender.com/api/expenses', newExpense)
       .then(res => {
         console.log(res.data);
         setSuccess(true);

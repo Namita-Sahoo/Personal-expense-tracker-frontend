@@ -19,13 +19,13 @@ function DashboardPage() {
   }, []);
 
   const fetchExpenses = () => {
-    axios.get('http://localhost:5000/api/expenses')
+    axios.get('https://personal-expense-tracker-backend-m3i0.onrender.com/api/expenses')
       .then(res => setExpenses(res.data))
       .catch(err => console.log("Error fetching expenses:", err));
   };
 
   const fetchMonthlySummary = () => {
-    axios.get('http://localhost:5000/api/expenses/monthly-summary')
+    axios.get('https://personal-expense-tracker-backend-m3i0.onrender.com/api/expenses/monthly-summary')
       .then(res => setMonthlyData(res.data))
       .catch(err => console.log("Error fetching monthly summary:", err));
   };
