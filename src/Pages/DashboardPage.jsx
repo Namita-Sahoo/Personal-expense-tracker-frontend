@@ -5,10 +5,12 @@ import foodImg from '../assets/images/food.jpg';
 import travelImg from '../assets/images/travel.jpg';
 import shoppingImg from '../assets/images/shopping.jpg';
 import otherImg from '../assets/images/others.jpg';
+import { useNavigate } from 'react-router-dom';
 
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 function DashboardPage() {
+  const navigate =useNavigate();
   
   const [expenses, setExpenses] = useState([]);
   const [monthlyData, setMonthlyData] = useState([]);
@@ -164,7 +166,7 @@ function DashboardPage() {
         </div>
       </div>
 
-      <div className="fab-btn" onClick={() => window.location.href = '/add'}>
+      <div className="fab-btn" onClick={() => navigate('/add')}>
         <i className="fas fa-plus"></i>
       </div>
 
